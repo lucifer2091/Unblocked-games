@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>THE VAULT // UNBLOCKED</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=20" />
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="ambient-image-layer" id="ambient-image-layer"></div>
+        <div class="ambient-overlay"></div>
+    </div>
+    <div id="root">
+        <div class="app-wrapper">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="container header-content">
+                    
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1 class="font-display font-black text-2xl uppercase">THE VAULT</h1>
+                            <span class="badge">UNBLOCKED & UNFILTERED</span>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                        <input id="search-input" type="text" class="search-input" placeholder="Search the vault..." />
+                    </div>
+
+                    <!-- Bored Button -->
+                    <button id="bored-btn" class="bored-btn" title="Take me somewhere random!">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        <span>BORED?</span>
+                    </button>
+
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="container main-content">
+                
+                <!-- Filters -->
+                <div class="filters-wrapper">
+                    <div class="filters-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path></svg>
+                    </div>
+                    <div class="filters-buttons" id="filters-container">
+                        <button class="filter-btn active" data-filter="All">All</button>
+                        <button class="filter-btn" data-filter="Hubs">Hubs</button>
+                        <button class="filter-btn" data-filter="Single Games">Single Games</button>
+                        <button class="filter-btn" data-filter="Tools">Tools</button>
+                        <button class="filter-btn" data-filter="Minecraft">Minecraft</button>
+                    </div>
+                </div>
+
+                <!-- Favorites Section -->
+                <div id="favorite-games-section" class="mb-8 hidden">
+                    <div class="section-title-wrapper mb-4">
+                        <h2>Favorites</h2>
+                    </div>
+                    <div id="favorite-games-grid" class="games-grid">
+                        <!-- Favorite Cards will be populated here via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Recent Games Section -->
+                <div id="recent-games-section" class="mb-8 hidden">
+                    <div class="section-title-wrapper mb-4">
+                        <h2>Recently Played</h2>
+                    </div>
+                    <div id="recent-games-grid" class="games-grid">
+                        <!-- Recent Cards will be populated here via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Games Grid -->
+                <div id="games-grid" class="games-grid">
+                    <!-- Cards will be populated here via JavaScript -->
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+    
+    <!-- Scripts -->
+    <script src="script.js?v=20"></script>
+</body>
+</html>
