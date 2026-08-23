@@ -80,7 +80,7 @@ function setAmbientTheme(game) {
     ambientImageLayer.style.opacity = '0';
     ambientSwapTimer = setTimeout(() => {
       ambientImageLayer.style.backgroundImage = `url('${game.image}')`;
-      ambientImageLayer.style.opacity = '0.45';
+      ambientImageLayer.style.opacity = '0.18';
     }, 350);
   } else {
     // First hover: just fade in normally
@@ -184,7 +184,22 @@ function renderGrid(gamesToRender, container) {
     // Dynamic full-page theme on hover
     const card = cardWrapper.querySelector('.game-card');
     card.addEventListener('mouseenter', () => setAmbientTheme(game));
-    card.addEventListener('mouseleave', () => resetAmbientTheme());
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateX = ((y - cy) / cy) * -6;
+      const rotateY = ((x - cx) / cx) * 6;
+      card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+      cardWrapper.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+      cardWrapper.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      resetAmbientTheme();
+    });
     container.appendChild(cardWrapper);
   });
 }
