@@ -76,16 +76,16 @@ function setAmbientTheme(game) {
     ambientImageLayer.classList.add('active');
   }
 
-  root.style.setProperty('--theme-accent', game.bg);
-  root.style.setProperty('--theme-accent-2', game.fg);
+  root.style.setProperty('--card-bg', game.bg);
+  root.style.setProperty('--card-fg', game.fg);
 }
 
 function resetAmbientTheme() {
   ambientResetTimer = setTimeout(() => {
     ambientImageLayer.classList.remove('active');
     ambientImageLayer.style.opacity = '';
-    root.style.setProperty('--theme-accent', '#6366f1');
-    root.style.setProperty('--theme-accent-2', '#ec4899');
+    root.style.setProperty('--card-bg', '#333');
+    root.style.setProperty('--card-fg', '#fff');
   }, 300);
 }
 
@@ -138,8 +138,9 @@ function renderGrid(gamesToRender, container) {
       </div>
     ` : '';
     
+    const categorySlug = game.category.toLowerCase().replace(/\s+/g, '-');
     cardWrapper.innerHTML = `
-      <div class="game-card-wrapper group">
+      <div class="game-card-wrapper group cat-${categorySlug}" style="--card-bg: ${game.bg}; --card-fg: ${game.fg}">
         <div class="game-category-tag">
           ${game.category}
         </div>
