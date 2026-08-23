@@ -133,6 +133,45 @@ window.toggleFavorite = function(id) {
 };
 
 // Render
+
+// Generate a self-contained SVG thumbnail (never breaks — embedded in page)
+function makePlaceholder(game) {
+  const title = String(game.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const bg = game.bg || '#333';
+  const fg = game.fg || '#fff';
+  const initials = title.split(' ').slice(0, 2).map(w => w[0] || '').join('').toUpperCase();
+  const svg =
+    `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='375' viewBox='0 0 600 375'>` +
+      `<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>` +
+        `<stop offset='0' stop-color='${bg}'/>` +
+        `<stop offset='1' stop-color='#000000' stop-opacity='0.55'/>` +
+      `</linearGradient></defs>` +
+      `<rect width='600' height='375' fill='url(#g)'/>` +
+      `<circle cx='500' cy='70' r='150' fill='${fg}' opacity='0.07'/>` +
+      `<circle cx='90' cy='340' r='110' fill='${fg}' opacity='0.05'/>` +
+      `<text x='300' y='200' text-anchor='middle' font-family='Outfit, sans-serif' font-size='120' font-weight='900' fill='${fg}' opacity='0.18'>${initials}</text>` +
+      `<text x='40' y='300' font-family='Outfit, sans-serif' font-size='40' font-weight='800' fill='${fg}'>${title}</text>` +
+      `<text x='40' y='338' font-family='Inter, sans-serif' font-size='20' fill='${fg}' opacity='0.6'>${game.category || ''}</text>` +
+    `</svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+// Use a reliable direct image when available; otherwise the inline placeholder
+function getImgSrc(game) {
+  if (game.image && !game.image.includes('mshots')) return game.image;
+  return makePlaceholder(game);
+}
+
+// Fallback for the rare case a direct image 404s in the browser
+window.placeholderFor = function(img) {
+  return makePlaceholder({
+    title: img.dataset.title,
+    category: img.dataset.category,
+    bg: img.dataset.bg,
+    fg: img.dataset.fg
+  });
+};
+
 function renderGrid(gamesToRender, container) {
   container.innerHTML = '';
   
@@ -158,7 +197,7 @@ function renderGrid(gamesToRender, container) {
             <div class="favorite-btn ${favoriteGameIds.includes(game.id) ? 'active' : ''}" onclick="toggleFavorite(${game.id})">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="${favoriteGameIds.includes(game.id) ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
-            <img alt="${game.title}" loading="lazy" class="game-image" src="${game.image}" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--card-bg), color-mix(in srgb, var(--card-bg) 40%, #000))'" />
+            <img alt="${game.title}" loading="lazy" class="game-image" src="${getImgSrc(game)}" data-title="${game.title}" data-category="${game.category}" data-bg="${game.bg}" data-fg="${game.fg}" onerror="this.onerror=null; this.src=window.placeholderFor(this)" />
             <div class="game-image-overlay"></div>
             <div class="game-hover-overlay">
               <div class="game-hover-play">
