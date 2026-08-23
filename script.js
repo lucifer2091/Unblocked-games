@@ -1,6 +1,6 @@
 const initialGames = [
   { id: 1, title: "Minecraft Classic", category: "Single Games", link: "https://sites.google.com/view/classroom6x/mnecrft-classic", bg: "rgb(85, 107, 59)", fg: "rgb(242, 234, 211)", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 2, title: "Slope", category: "Single Games", link: "https://slope-game.github.io/", bg: "rgb(0, 128, 0)", fg: "rgb(255, 255, 255)", image: "https://cdn.akamai.steamstatic.com/steam/apps/2705270/header.jpg" },
+  { id: 2, title: "Slope", category: "Single Games", link: "https://slope-game.github.io/", bg: "rgb(0, 128, 0)", fg: "rgb(255, 255, 255)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fslope-game.github.io%2F?w=600&h=400" },
   { id: 3, title: "1v1.LOL", category: "Single Games", link: "https://1v1.lol/", bg: "rgb(50, 50, 50)", fg: "rgb(255, 255, 255)", image: "https://cdn.akamai.steamstatic.com/steam/apps/1958840/header.jpg" },
   { id: 4, title: "Cookie Clicker", category: "Single Games", link: "https://omaribnzakaria.github.io/ublckdgms/cookieclicker/index.html", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "https://cdn.akamai.steamstatic.com/steam/apps/1454400/header.jpg" },
   { id: 5, title: "Slow Roads", category: "Single Games", link: "https://manscod.github.io/other/slowroads/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://slowroads.io/og-image.png" },
@@ -11,7 +11,7 @@ const initialGames = [
   { id: 10, title: "Geometry Lite", category: "Single Games", link: "https://geometrylite.us.com/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "https://cdn.akamai.steamstatic.com/steam/apps/322170/capsule_616x353.jpg" },
   { id: 11, title: "Geometry Dash SubZero", category: "Single Games", link: "https://geometry-dash-unbanned.github.io/play/geometry-dash-subzero.html#", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "https://cdn.akamai.steamstatic.com/steam/apps/322170/capsule_616x353.jpg" },
   { id: 12, title: "Pac-Man", category: "Single Games", link: "https://www.google.com/logos/interactive/2010/pacman10-i.html", bg: "rgb(255, 255, 0)", fg: "rgb(0, 0, 0)", image: "https://cdn.akamai.steamstatic.com/steam/apps/2485720/header.jpg" },
-  { id: 13, title: "Tetris", category: "Single Games", link: "https://tetris.com/play-tetris", bg: "rgb(0, 120, 200)", fg: "rgb(255, 255, 255)", image: "https://cdn.akamai.steamstatic.com/steam/apps/1221680/header.jpg" },
+  { id: 13, title: "Tetris", category: "Single Games", link: "https://tetris.com/play-tetris", bg: "rgb(0, 120, 200)", fg: "rgb(255, 255, 255)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftetris.com%2Fplay-tetris?w=600&h=400" },
   { id: 14, title: "Flappy Bird", category: "Single Games", link: "https://flappybird.io/", bg: "rgb(78, 193, 233)", fg: "rgb(255, 220, 50)", image: "https://cdn.akamai.steamstatic.com/steam/apps/2390340/header.jpg" },
 
   { id: 15, title: "Unblocked Games (omaribnzakaria)", category: "Hubs", link: "https://omaribnzakaria.github.io/ublckdgms/", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fomaribnzakaria.github.io%2Fublckdgms%2F?w=600&h=400" },
@@ -158,7 +158,7 @@ function renderGrid(gamesToRender, container) {
             <div class="favorite-btn ${favoriteGameIds.includes(game.id) ? 'active' : ''}" onclick="toggleFavorite(${game.id})">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="${favoriteGameIds.includes(game.id) ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </div>
-            <img alt="${game.title}" loading="lazy" class="game-image" src="${game.image}" onerror="this.style.display='none'" />
+            <img alt="${game.title}" loading="lazy" class="game-image" src="${game.image}" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--card-bg), color-mix(in srgb, var(--card-bg) 40%, #000))'" />
             <div class="game-image-overlay"></div>
             <div class="game-hover-overlay">
               <div class="game-hover-play">
