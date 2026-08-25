@@ -1,45 +1,45 @@
-const initialGames = [
-  { id: 1, title: "Minecraft Classic", category: "Single Games", link: "https://sites.google.com/view/classroom6x/mnecrft-classic", bg: "rgb(85, 107, 59)", fg: "rgb(242, 234, 211)", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 2, title: "Slope", category: "Single Games", link: "https://slope-game.github.io/", bg: "rgb(0, 128, 0)", fg: "rgb(255, 255, 255)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fslope-game.github.io%2F?w=600&h=400" },
-  { id: 3, title: "1v1.LOL", category: "Single Games", link: "https://1v1.lol/", bg: "rgb(50, 50, 50)", fg: "rgb(255, 255, 255)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2F1v1.lol%2F?w=600&h=400" },
-  { id: 4, title: "Cookie Clicker", category: "Single Games", link: "https://omaribnzakaria.github.io/ublckdgms/cookieclicker/index.html", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fomaribnzakaria.github.io%2Fublckdgms%2Fcookieclicker%2Findex.html?w=600&h=400" },
-  { id: 5, title: "Slow Roads", category: "Single Games", link: "https://manscod.github.io/other/slowroads/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://slowroads.io/og-image.png" },
-  { id: 6, title: "Drift Boss", category: "Single Games", link: "https://drift-bossonline.github.io/#", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://driftboss3.io/data/image/game/drift-boss.png" },
-  { id: 7, title: "Getaway Shootout", category: "Single Games", link: "https://ubg67.gitlab.io/game/getaway-shootout.html", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fubg67.gitlab.io%2Fgame%2Fgetaway-shootout.html?w=600&h=400" },
-  { id: 8, title: "Drawasaurus", category: "Single Games", link: "https://www.drawasaurus.org/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.drawasaurus.org%2F?w=600&h=400" },
-  { id: 9, title: "Progress Knight Rewritten", category: "Single Games", link: "https://zdzban3.github.io/Progress-Knight-Rewritten/", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fzdzban3.github.io%2FProgress-Knight-Rewritten%2F?w=600&h=400" },
-  { id: 10, title: "Geometry Lite", category: "Single Games", link: "https://geometrylite.us.com/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgeometrylite.us.com%2F?w=600&h=400" },
-  { id: 11, title: "Geometry Dash SubZero", category: "Single Games", link: "https://geometry-dash-unbanned.github.io/play/geometry-dash-subzero.html#", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgeometry-dash-unbanned.github.io%2Fplay%2Fgeometry-dash-subzero.html?w=600&h=400" },
-  { id: 12, title: "Pac-Man", category: "Single Games", link: "https://www.google.com/logos/interactive/2010/pacman10-i.html", bg: "rgb(255, 255, 0)", fg: "rgb(0, 0, 0)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.google.com%2Flogos%2Finteractive%2F2010%2Fpacman10-i.html?w=600&h=400" },
-  { id: 13, title: "Tetris", category: "Single Games", link: "https://tetris.com/play-tetris", bg: "rgb(0, 120, 200)", fg: "rgb(255, 255, 255)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftetris.com%2Fplay-tetris?w=600&h=400" },
-  { id: 14, title: "Flappy Bird", category: "Single Games", link: "https://flappybird.io/", bg: "rgb(78, 193, 233)", fg: "rgb(255, 220, 50)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fflappybird.io%2F?w=600&h=400" },
+﻿const initialGames = [
+  { id: 1, title: "Minecraft Classic", category: "Single Games", link: "https://sites.google.com/view/classroom6x/mnecrft-classic", bg: "rgb(85, 107, 59)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/1.jpg" },
+  { id: 2, title: "Slope", category: "Single Games", link: "https://slope-game.github.io/", bg: "rgb(0, 128, 0)", fg: "rgb(255, 255, 255)", image: "assets/thumbs/2.jpg" },
+  { id: 3, title: "1v1.LOL", category: "Single Games", link: "https://1v1.lol/", bg: "rgb(50, 50, 50)", fg: "rgb(255, 255, 255)", image: "assets/thumbs/3.jpg" },
+  { id: 4, title: "Cookie Clicker", category: "Single Games", link: "https://omaribnzakaria.github.io/ublckdgms/cookieclicker/index.html", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/4.jpg" },
+  { id: 5, title: "Slow Roads", category: "Single Games", link: "https://manscod.github.io/other/slowroads/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/5.jpg" },
+  { id: 6, title: "Drift Boss", category: "Single Games", link: "https://drift-bossonline.github.io/#", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/6.jpg" },
+  { id: 7, title: "Getaway Shootout", category: "Single Games", link: "https://ubg67.gitlab.io/game/getaway-shootout.html", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/7.jpg" },
+  { id: 8, title: "Drawasaurus", category: "Single Games", link: "https://www.drawasaurus.org/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/8.jpg" },
+  { id: 9, title: "Progress Knight Rewritten", category: "Single Games", link: "https://zdzban3.github.io/Progress-Knight-Rewritten/", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/9.jpg" },
+  { id: 10, title: "Geometry Lite", category: "Single Games", link: "https://geometrylite.us.com/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/10.jpg" },
+  { id: 11, title: "Geometry Dash SubZero", category: "Single Games", link: "https://geometry-dash-unbanned.github.io/play/geometry-dash-subzero.html#", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/11.jpg" },
+  { id: 12, title: "Pac-Man", category: "Single Games", link: "https://www.google.com/logos/interactive/2010/pacman10-i.html", bg: "rgb(255, 255, 0)", fg: "rgb(0, 0, 0)", image: "assets/thumbs/12.jpg" },
+  { id: 13, title: "Tetris", category: "Single Games", link: "https://tetris.com/play-tetris", bg: "rgb(0, 120, 200)", fg: "rgb(255, 255, 255)", image: "assets/thumbs/13.jpg" },
+  { id: 14, title: "Flappy Bird", category: "Single Games", link: "https://flappybird.io/", bg: "rgb(78, 193, 233)", fg: "rgb(255, 220, 50)", image: "assets/thumbs/14.jpg" },
 
-  { id: 15, title: "Unblocked Games (omaribnzakaria)", category: "Hubs", link: "https://omaribnzakaria.github.io/ublckdgms/", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fomaribnzakaria.github.io%2Fublckdgms%2F?w=600&h=400" },
-  { id: 16, title: "Hooda Math", category: "Hubs", link: "https://www.hoodamath.com/index.html#gsc.tab=0", bg: "rgb(85, 107, 59)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.hoodamath.com%2Findex.html%23gsc.tab%3D0?w=600&h=400" },
-  { id: 17, title: "Classroom 6x", category: "Hubs", link: "https://sites.google.com/view/classroom6x/home", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsites.google.com%2Fview%2Fclassroom6x%2Fhome?w=600&h=400" },
-  { id: 18, title: "Yoosfuhl Games", category: "Hubs", link: "https://yoosfuhl.com/games", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fyoosfuhl.com%2Fgames?w=600&h=400" },
-  { id: 19, title: "MSN Classics", category: "Hubs", link: "https://www.msn.com/en-us/play/classics", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/amort/RW7rGmW9v6F3fKwYAAAAjAAAA-ig?ver=8e4e&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&f=jpg&o=f&p=140&aim=true" },
-  { id: 20, title: "UBG66", category: "Hubs", link: "https://sites.google.com/view/ubg66/home", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsites.google.com%2Fview%2Fubg66%2Fhome?w=600&h=400" },
-  { id: 21, title: "Study75", category: "Hubs", link: "https://study75.space/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fstudy75.space%2F?w=600&h=400" },
-  { id: 22, title: "Classroom Center", category: "Hubs", link: "https://sites.google.com/classroom.center/view-1/", bg: "rgb(176, 103, 110)", fg: "rgb(35, 21, 7)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsites.google.com%2Fclassroom.center%2Fview-1%2F?w=600&h=400" },
-  { id: 23, title: "Games Unblocked GitLab", category: "Hubs", link: "https://gamesunblocked.gitlab.io/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fgamesunblocked.gitlab.io%2F?w=600&h=400" },
-  { id: 24, title: "Amplify Games", category: "Hubs", link: "https://r8r7.github.io/amplify/games/", bg: "rgb(107, 58, 94)", fg: "rgb(245, 231, 216)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fr8r7.github.io%2Famplify%2Fgames%2F?w=600&h=400" },
-  { id: 25, title: "Unblocked Gamers", category: "Hubs", link: "https://www.unblockedgamers.com/", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.unblockedgamers.com%2F?w=600&h=400" },
-  { id: 26, title: "Unblocked Games 4 Me", category: "Hubs", link: "https://sites.google.com/site/unblockedgames4me/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fsites.google.com%2Fsite%2Funblockedgames4me%2F?w=600&h=400" },
+  { id: 15, title: "Unblocked Games (omaribnzakaria)", category: "Hubs", link: "https://omaribnzakaria.github.io/ublckdgms/", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/15.jpg" },
+  { id: 16, title: "Hooda Math", category: "Hubs", link: "https://www.hoodamath.com/index.html#gsc.tab=0", bg: "rgb(85, 107, 59)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/16.jpg" },
+  { id: 17, title: "Classroom 6x", category: "Hubs", link: "https://sites.google.com/view/classroom6x/home", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/17.jpg" },
+  { id: 18, title: "Yoosfuhl Games", category: "Hubs", link: "https://yoosfuhl.com/games", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/18.jpg" },
+  { id: 19, title: "MSN Classics", category: "Hubs", link: "https://www.msn.com/en-us/play/classics", bg: "rgb(156, 58, 44)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/19-msn.jpg" },
+  { id: 20, title: "UBG66", category: "Hubs", link: "https://sites.google.com/view/ubg66/home", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/20.jpg" },
+  { id: 21, title: "Study75", category: "Hubs", link: "https://study75.space/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/21.jpg" },
+  { id: 22, title: "Classroom Center", category: "Hubs", link: "https://sites.google.com/classroom.center/view-1/", bg: "rgb(176, 103, 110)", fg: "rgb(35, 21, 7)", image: "assets/thumbs/22.jpg" },
+  { id: 23, title: "Games Unblocked GitLab", category: "Hubs", link: "https://gamesunblocked.gitlab.io/", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", image: "assets/thumbs/23.jpg" },
+  { id: 24, title: "Amplify Games", category: "Hubs", link: "https://r8r7.github.io/amplify/games/", bg: "rgb(107, 58, 94)", fg: "rgb(245, 231, 216)", image: "assets/thumbs/24.jpg" },
+  { id: 25, title: "Unblocked Gamers", category: "Hubs", link: "https://www.unblockedgamers.com/", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/25.jpg" },
+  { id: 26, title: "Unblocked Games 4 Me", category: "Hubs", link: "https://sites.google.com/site/unblockedgames4me/", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", image: "assets/thumbs/26.jpg" },
 
-  { id: 27, title: "Resource Packs", category: "Tools", link: "https://resourcepacks.gg/en", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fresourcepacks.gg%2Fen?w=600&h=400" },
-  { id: 28, title: "Google Games Search", category: "Tools", link: "https://www.google.com/search?q=google+games", bg: "rgb(176, 103, 110)", fg: "rgb(35, 21, 7)", image: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" },
+  { id: 27, title: "Resource Packs", category: "Tools", link: "https://resourcepacks.gg/en", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", image: "assets/thumbs/27.jpg" },
+  { id: 28, title: "Google Games Search", category: "Tools", link: "https://www.google.com/search?q=google+games", bg: "rgb(176, 103, 110)", fg: "rgb(35, 21, 7)", image: "assets/thumbs/28.jpg" },
 
-  { id: 29, title: "Minecraft 1.8 WebAssembly", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftwasm/188.html", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", tag: "WebAssembly", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 30, title: "Minecraft 1.12 WebAssembly", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftwasm/1122.html", bg: "rgb(201, 152, 70)", fg: "rgb(35, 21, 7)", tag: "WebAssembly", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 31, title: "Minecraft 1.8 Download", category: "Minecraft", link: "https://drive.google.com/file/d/1xFOfwquT4cXPoeEq-0bLANQIjldh1o9C/view?usp=drive_link", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", tag: "Downloads", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 32, title: "Minecraft 1.12 Download", category: "Minecraft", link: "https://drive.google.com/file/d/1yMy9I1utHcdTQCdyyqy6Zpjh4XgwqCjo/view?usp=sharing", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", tag: "Downloads", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 33, title: "Minecraft JavaScript 1.8", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftjs/188.html", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", tag: "JavaScript", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" },
-  { id: 34, title: "Minecraft JavaScript 1.12", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftjs/1122.html", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", tag: "JavaScript", image: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg" }
+  { id: 29, title: "Minecraft 1.8 WebAssembly", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftwasm/188.html", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", tag: "WebAssembly", image: "assets/thumbs/29.jpg" },
+  { id: 30, title: "Minecraft 1.12 WebAssembly", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftwasm/1122.html", bg: "rgb(201, 152, 70)", fg: "rgb(35, 21, 7)", tag: "WebAssembly", image: "assets/thumbs/30.jpg" },
+  { id: 31, title: "Minecraft 1.8 Download", category: "Minecraft", link: "https://drive.google.com/file/d/1xFOfwquT4cXPoeEq-0bLANQIjldh1o9C/view?usp=drive_link", bg: "rgb(168, 83, 49)", fg: "rgb(250, 239, 217)", tag: "Downloads", image: "assets/thumbs/31.jpg" },
+  { id: 32, title: "Minecraft 1.12 Download", category: "Minecraft", link: "https://drive.google.com/file/d/1yMy9I1utHcdTQCdyyqy6Zpjh4XgwqCjo/view?usp=sharing", bg: "rgb(63, 125, 123)", fg: "rgb(242, 234, 211)", tag: "Downloads", image: "assets/thumbs/32.jpg" },
+  { id: 33, title: "Minecraft JavaScript 1.8", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftjs/188.html", bg: "rgb(122, 138, 58)", fg: "rgb(27, 26, 10)", tag: "JavaScript", image: "assets/thumbs/33.jpg" },
+  { id: 34, title: "Minecraft JavaScript 1.12", category: "Minecraft", link: "https://omaribnzakaria.github.io/ublckdgms/eaglercraftjs/1122.html", bg: "rgb(47, 72, 88)", fg: "rgb(242, 234, 211)", tag: "JavaScript", image: "assets/thumbs/34.jpg" }
 ];
 
-// ─── BORED POOL ───────────────────────────────────────────────
-// Add extra links here anytime — the bored button picks randomly from this list.
+// â”€â”€â”€ BORED POOL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Add extra links here anytime â€” the bored button picks randomly from this list.
 // If the list is empty, it falls back to picking from the main games list.
 const boredPool = [
   { title: "Slope", link: "https://slope-game.github.io/" },
@@ -50,7 +50,7 @@ const boredPool = [
   { title: "Cookie Clicker", link: "https://omaribnzakaria.github.io/ublckdgms/cookieclicker/index.html" },
   { title: "Drift Boss", link: "https://drift-bossonline.github.io/#" }
 ];
-// ──────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 // State
 let games = [];
@@ -76,7 +76,7 @@ function setAmbientTheme(game) {
   const isAlreadyActive = ambientImageLayer.classList.contains('active');
 
   if (isAlreadyActive) {
-    // Cross-fade: fade out → swap image → fade back in
+    // Cross-fade: fade out â†’ swap image â†’ fade back in
     ambientImageLayer.style.opacity = '0';
     ambientSwapTimer = setTimeout(() => {
       ambientImageLayer.style.backgroundImage = `url('${game.image}')`;
@@ -134,7 +134,7 @@ window.toggleFavorite = function(id) {
 
 // Render
 
-// Generate a self-contained SVG thumbnail (never breaks — embedded in page)
+// Generate a self-contained SVG thumbnail (never breaks â€” embedded in page)
 function makePlaceholder(game) {
   const title = String(game.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const bg = game.bg || '#333';
@@ -156,9 +156,9 @@ function makePlaceholder(game) {
   return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
 }
 
-// Use a reliable direct image when available; otherwise the inline placeholder
+// All images are now local (assets/thumbs/*) — never blocked on school WiFi
 function getImgSrc(game) {
-  if (game.image && !game.image.includes('mshots')) return game.image;
+  if (game.image) return game.image;
   return makePlaceholder(game);
 }
 
